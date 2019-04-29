@@ -7,7 +7,8 @@
     "test": "jest",
     "build": "tsc --build",
     "types": "tsc -d --emitDeclarationOnly --allowJs false --outDir types",
-    "watch": "watch 'npm run test' src tests"
+    "watch": "watch 'npm run test' src tests",
+    "postversion": "git push --follow-tags"
   },
   "keywords": [
     "colors"
