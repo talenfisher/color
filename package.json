@@ -3,6 +3,7 @@
   "version": "0.1.4",
   "description": "Simple and lightweight color utilities",
   "main": "dist/index.js",
+  "types": "types/index.d.ts",
   "scripts": {
     "test": "jest",
     "build": "tsc --build",
