@@ -1,6 +1,6 @@
 {
   "name": "@talenfisher/color",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple and lightweight color utilities",
   "main": "dist/index.js",
   "scripts": {
