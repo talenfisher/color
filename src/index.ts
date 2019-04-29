@@ -12,9 +12,10 @@ const HEX_INVALID_ERROR = "Not a valid hexadecimal";
 const HEX_VALID_LENGTHS = [ 3, 4, 6, 8 ];
 
 export enum Precision {
-    Color24   = 1, // rrrrrrrr-gggggggg-bbbbbbbb-aaaaaaaa
-    Color16   = 2, // rrrrrr-gggggg-bbbbbb-aaaaaa
-    Color8   = 4, // rrrr-gggg-bbbb-aaaa
+    Color32   = 1, // rrrrrrrr-gggggggg-bbbbbbbb-aaaaaaaa
+    Color24   = 2, // rrrrrr-gggggg-bbbbbb-aaaaaa
+    Color16   = 4, // rrrr-gggg-bbbb-aaaa
+    Color8    = 8, // rr-gg-bb-aa
 }
 
 const $value = Symbol("The color's 32 bit value");
