@@ -12,10 +12,10 @@ const HEX_INVALID_ERROR = "Not a valid hexadecimal";
 const HEX_VALID_LENGTHS = [ 3, 4, 6, 8 ];
 
 export enum Precision {
-    Color32   = 1, // rrrrrrrr-gggggggg-bbbbbbbb-aaaaaaaa
+    Color32   = 0, // rrrrrrrr-gggggggg-bbbbbbbb-aaaaaaaa
     Color24   = 2, // rrrrrr-gggggg-bbbbbb-aaaaaa
     Color16   = 4, // rrrr-gggg-bbbb-aaaa
-    Color8    = 8, // rr-gg-bb-aa
+    Color8    = 6, // rr-gg-bb-aa
 }
 
 const $value = Symbol("The color's 32 bit value");
@@ -118,10 +118,10 @@ class Color {
      * Drops the precision of a color
      */
     dropPrecisionTo(precision: Precision) {
-        this.r = Math.max((Math.floor((this.r + 1) / precision) * precision) - 1, 0);
-        this.g = Math.max((Math.floor((this.g + 1) / precision) * precision) - 1, 0);
-        this.b = Math.max((Math.floor((this.b + 1) / precision) * precision) - 1, 0);
-        this.a = Math.max((Math.floor((this.a + 1) / precision) * precision) - 1, 0);
+        this.r = ((this.r >>> precision) / (0xff >>> precision)) * 0xff;
+        this.g = ((this.g >>> precision) / (0xff >>> precision)) * 0xff;
+        this.b = ((this.b >>> precision) / (0xff >>> precision)) * 0xff;
+        this.a = ((this.a >>> precision) / (0xff >>> precision)) * 0xff;
     }
 
     /**

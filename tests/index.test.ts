@@ -291,7 +291,7 @@ describe("Color", () => {
         it("Should drop precision of colors that are not divisible by factors of 2", () => {
             let color = new Color("#cd7f32");
             color.dropPrecisionTo(Precision.Color16);
-            expect(color.hex).toBe("#cb7f2f");
+            expect(color.hex).toBe("#cc7733");
         });
 
         it("Should not drop numbers to lower than 0", () => {
