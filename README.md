@@ -1,0 +1,2 @@
+# Color
+This is a relatively quick library I made for handling rgb color notation conversions (hexadecimal -> functional and vice versa), precision drops and other neat stuff. More info + support for other colorspaces is planned for future updates.

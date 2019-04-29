@@ -1,0 +1,25 @@
+{
+  "name": "@talenfisher/color",
+  "version": "0.0.0",
+  "description": "Simple and lightweight color utilities",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc --build",
+    "types": "tsc -d --emitDeclarationOnly --allowJs false --outDir types",
+    "watch": "watch 'npm run test' src tests"
+  },
+  "keywords": [
+    "colors"
+  ],
+  "author": "Talen Fisher",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.13.7",
+    "jest": "^24.7.1",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.4.5",
+    "watch": "^1.0.2"
+  }
+}
