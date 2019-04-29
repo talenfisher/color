@@ -117,10 +117,10 @@ class Color {
      * Drops the precision of a color
      */
     dropPrecisionTo(precision: Precision) {
-        this.r = (Math.floor((this.r + 1) / precision) * precision) - 1;
-        this.g = (Math.floor((this.g + 1) / precision) * precision) - 1;
-        this.b = (Math.floor((this.b + 1) / precision) * precision) - 1;
-        this.a = (Math.floor((this.a + 1) / precision) * precision) - 1;
+        this.r = Math.max((Math.floor((this.r + 1) / precision) * precision) - 1, 0);
+        this.g = Math.max((Math.floor((this.g + 1) / precision) * precision) - 1, 0);
+        this.b = Math.max((Math.floor((this.b + 1) / precision) * precision) - 1, 0);
+        this.a = Math.max((Math.floor((this.a + 1) / precision) * precision) - 1, 0);
     }
 
     /**

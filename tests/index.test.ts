@@ -293,5 +293,11 @@ describe("Color", () => {
             color.dropPrecisionTo(Precision.Color16);
             expect(color.hex).toBe("#cd7f31");
         });
+
+        it("Should not drop numbers to lower than 0", () => {
+            let color = new Color("#000000");
+            color.dropPrecisionTo(Precision.Color16);
+            expect(color.hex).toBe("#000000");
+        });
     });
 });
