@@ -143,9 +143,9 @@ class Color {
      */
     static distanceBetween(color1: Color, color2: Color) {
         let rmean = (color1.r + color2.r) / 2;
-        let r = color1.r - color2.r;
-        let g = color1.g - color2.g;
-        let b = color1.b - color2.b;
+        let r = Math.abs(color1.r - color2.r);
+        let g = Math.abs(color1.g - color2.g);
+        let b = Math.abs(color1.b - color2.b);
 
         return Math.sqrt((((512 + rmean) * r * 4) >> 8) + (4 * g * g) + (((767 - rmean) * b * b) >> 8));
     }
